@@ -1,2 +1,2 @@
 # Python
-Exercícios realizados utilizando a linguagem python
+Exercícios realizados utilizando a linguagem Python
