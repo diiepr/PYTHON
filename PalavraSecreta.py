@@ -36,6 +36,7 @@ while True:
         palavra_secreta = input("Digite a palavra secreta: ")
         tentativas = 0
         letras_acertadas = ""
+        os.system("cls")
 
     
 
