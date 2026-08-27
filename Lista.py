@@ -13,10 +13,7 @@ while True:
         if escolha.lower().startswith("a"):
             os.system("cls")
             lista.pop(int(input("\nDigite o índice que você deseja apagar: ")))
-            if lista.pop is False:
-                print("\nApagado com sucesso!")
-            else:
-                print("\nApagado com sucesso!")
+            
     except ValueError:
             print('Por favor digite número int.')
             continue
