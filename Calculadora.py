@@ -25,15 +25,18 @@ while True:
     operacao = input("\nDigite uma operação [+][-][*][/]: ")
     operacao_valida = "+-*/"
 
-    while operacao not in operacao_valida:
-        print("\nOperação Inválida.")
-        operacao = input("\nDigite uma operação [+][-][*][/]: ")
-        continue
 
     while len(operacao) > 1:
         print("\nDigite apenas um operador.")
         operacao = input("\nDigite uma operação [+][-][*][/]: ")
         continue
+
+    while operacao not in operacao_valida:
+        print("\nOperação Inválida.")
+        operacao = input("\nDigite uma operação [+][-][*][/]: ")
+        continue
+
+   
 
 
 
