@@ -9,27 +9,14 @@ while True:
     escolha = input("Selecione uma opção \n[i]nserir  [a]pagar  [l]istar: "  )
 
 
-    if escolha.startswith("l") and len(lista) == 0:
-        os.system("cls")
-        print("\nNão existem items para listar.")
-        continue
-    elif escolha.startswith("l") and len(lista) > 0:
-        os.system("cls")
-        print("Sua lista: ")
-        for i, valor in enumerate(lista, start= int(1)):
-            print(i, valor, sep="º ")
-            
-
-    elif escolha.startswith("i"):
-        os.system("cls")
-        lista.append(input("\nDigite um alimento que você deseja adicionar a lista: "))
-        print("\nInserido com sucesso!")
-
     try:
-        if escolha.startswith("a"):
+        if escolha.lower().startswith("a"):
             os.system("cls")
             lista.pop(int(input("\nDigite o índice que você deseja apagar: ")))
-            print("\nApagado com sucesso!")
+            if lista.pop is False:
+                print("\nApagado com sucesso!")
+            else:
+                print("\nApagado com sucesso!")
     except ValueError:
             print('Por favor digite número int.')
             continue
@@ -39,6 +26,38 @@ while True:
     except Exception:
             print('Erro desconhecido')
             continue
+
+
+    if escolha.lower().startswith("l") and len(lista) == 0:
+        os.system("cls")
+        print("\nNão existem items para listar.")
+        continue
+
+
+    elif escolha.lower().startswith("l") and len(lista) > 0:
+        os.system("cls")
+        print("Sua lista: ")
+        for i, valor in enumerate(lista, start= int(1)):
+            print(i, valor, sep="º ")
+            
+
+    elif escolha.lower().startswith("i"):
+        os.system("cls")
+        lista.append(input("\nDigite um alimento que você deseja adicionar a lista: "))
+        print("\nInserido com sucesso!")
+
+    elif escolha.lower().startswith("a"):
+         continue
+
+
+    else:
+         os.system("cls")
+         print("Digite apenas i, a ou l.")
+         continue
+
+    
+
+    
     
         
 
